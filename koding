@@ -1,0 +1,34 @@
+ Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("===  Program Rekapitulasi Nilai Ujian Produktif RPL ===");
+        
+        System.out.print("Masukkan jumlah siswa: ");
+        int jumlahSiswa = scanner.nextInt();
+        
+        double totalNilai = 0;
+        
+        if (jumlahSiswa <= 0) {
+            System.out.println("Jumlah siswa tidak valid. Program berhenti.");
+        } else {
+            System.out.println("----------------------------------------");
+            
+            for (int i = 1; i <= jumlahSiswa; i++) {
+                System.out.print("Masukkan nilai siswa ke-" + i + ": ");
+                
+                double nilai = scanner.nextDouble();
+                
+                totalNilai = totalNilai + nilai;
+            }
+            
+            double rataRata = totalNilai / jumlahSiswa;
+            
+            System.out.println("----------------------------------------");
+            System.out.println("HASIL REKAPITULASI:");
+            System.out.println("Jumlah siswa yang didata: " + jumlahSiswa);
+            
+            System.out.printf("Total keseluruhan nilai: %.2f\n", totalNilai);
+            
+            System.out.printf("Nilai rata-rata kelas: %.2f\n", rataRata);
+        }
+        
+        
